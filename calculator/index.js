@@ -1,35 +1,54 @@
 const readline = require('readline-sync');
 
-console.log('Welcome to the calculator!');
+const welcome = () => {
+    console.log('Welcome to the calculator!');
+    console.log('==========================');
+}
 
-function calculate() {
-    let operator = readline.question("Please enter the operator: ");
-    let cb;
+const chooseOperator = () => {
+    const operator = readline.question("Please enter the operator: ");
     switch (operator) {
         case '+':
-            cb = (x,y) => x + y;
-            break;
+            return [operator, (x,y) => x + y];
         case '-':
-            cb = (x,y) => x - y;
-            break;
+            return [operator, (x,y) => x - y];
         case '*':
-            cb = (x,y) => x * y;
-            break;
+            return [operator, (x,y) => x * y];
         case '/':
-            cb = (x,y) => x / y;
-            break;
+            return [operator, (x,y) => x / y];
         default:
-            return console.log('Invalid operator, please try again');
+            return ['?', (x,y) => 0];
     }
+}
+
+const chooseNumbers = (operator) => {
     let numArr = [];
     let size = +readline.question(`How many numbers would you like to ${operator}? `);
     for (let i = 1; i <= size; i++) {
         let x = +readline.question(`Please enter number ${i}: `);
-        numArr.push(x);
+        if (isNaN(x)) {
+            console.log('Not a valid number')
+        } else {
+            numArr.push(x);
+        } 
     }
     let start = numArr.shift();
-    let solution = numArr.reduce((acc, x) => cb(acc, x), start);
-    console.log(`${start} ${operator}`, numArr.join(` ${operator} `), '=' , solution);
+    return [start, numArr]
 }
 
-calculate();
+const answer = (operator, cb, start, numArr) => {
+    let solution = numArr.reduce((acc, x) => cb(acc, x), start);
+    console.log(`${start} ${operator}`, numArr.join(` ${operator} `), '=' , solution);
+    console.log('==========================');
+}
+
+const calculate = () => {
+    const [operator, cb] = chooseOperator();
+    const [start, numArr] = chooseNumbers(operator);
+    answer(operator, cb, start, numArr);
+}
+
+welcome();
+while (true) {    
+    calculate();
+}
