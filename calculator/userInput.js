@@ -10,17 +10,23 @@ exports.chooseMode = () => {
 
 exports.chooseOperator = () => {
     const operator = readline.question("Please enter the operator: ");
-    switch (operator) {
-        case '+':
-            return [operator, (x,y) => x + y];
-        case '-':
-            return [operator, (x,y) => x - y];
-        case '*':
-            return [operator, (x,y) => x * y];
-        case '/':
-            return [operator, (x,y) => x / y];
-        default:
-            return ['?', (x,y) => 0];
+    try {
+        switch (operator) {
+            case '+':
+                return [operator, (x,y) => x + y];
+            case '-':
+                return [operator, (x,y) => x - y];
+            case '*':
+                return [operator, (x,y) => x * y];
+            case '/':
+                return [operator, (x,y) => x / y];
+            default:
+                throw 'Invalid operator';
+        }
+    }
+    catch(e) {
+        console.log(e);
+        return this.chooseOperator();
     }
 }
 
@@ -36,6 +42,9 @@ exports.chooseNumbers = (operator) => {
         } 
     }
     let start = numArr.shift();
+    if (operator === '/') {
+        numArr = numArr.filter((x) => x !== 0);
+    }
     return [start, numArr]
 }
 
