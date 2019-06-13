@@ -10,36 +10,39 @@ exports.chooseMode = () => {
 
 exports.chooseOperator = () => {
     const operator = readline.question("Please enter the operator: ");
-    try {
-        switch (operator) {
-            case '+':
-                return [operator, (x,y) => x + y];
-            case '-':
-                return [operator, (x,y) => x - y];
-            case '*':
-                return [operator, (x,y) => x * y];
-            case '/':
-                return [operator, (x,y) => x / y];
-            default:
-                throw 'Invalid operator';
-        }
-    }
-    catch(e) {
-        console.log(e);
-        return this.chooseOperator();
+    switch (operator) {
+        case '+':
+            return [operator, (x,y) => x + y];
+        case '-':
+            return [operator, (x,y) => x - y];
+        case '*':
+            return [operator, (x,y) => x * y];
+        case '/':
+            return [operator, (x,y) => x / y];
+        default:
+            console.log('Invalid operator');
+            return this.chooseOperator()
     }
 }
 
 exports.chooseNumbers = (operator) => {
     let numArr = [];
-    let size = +readline.question(`How many numbers would you like to ${operator}? `);
-    for (let i = 1; i <= size; i++) {
-        let x = +readline.question(`Please enter number ${i}: `);
-        if (isNaN(x)) {
+    let size = NaN;
+    while (isNaN(size)) {
+        size = +readline.question(`How many numbers would you like to ${operator}? `);
+        if (isNaN(size)) {
             console.log('Not a valid number')
-        } else {
-            numArr.push(x);
-        } 
+        }
+    }
+    for (let i = 1; i <= size; i++) {
+        let x = NaN;
+        while (isNaN(x)) {
+            x = +readline.question(`Please enter number ${i}: `);
+            if (isNaN(x)) {
+                console.log('Not a valid number')
+            }
+        }
+        numArr.push(x);
     }
     let start = numArr.shift();
     if (operator === '/') {
