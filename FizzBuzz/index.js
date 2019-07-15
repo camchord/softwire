@@ -25,8 +25,10 @@ const fizzBuzz = (i) => {
     })
     if(arr.length > 0) {
         console.log(arr.join(''));
+        return arr.join('');
     } else {
         console.log(i);
+        return i;
     }
 }
 
@@ -62,3 +64,5 @@ while (true) {
 for (let i = 1; i <= maxNum; i++) {
     fizzBuzz(i);
 }
+
+module.exports = fizzBuzz;
