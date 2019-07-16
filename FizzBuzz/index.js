@@ -35,7 +35,20 @@ const fizzBuzz = (i) => {
 while (true) {
     let addRule = readline.question("Would you like to add a rule? (Y/N) ");
     if (addRule === "Y") {
-        let numInput = readline.question("If the number is a multiple of... ");
+        let simCom = readline.question("Simple rule (No JS), or Complex Rule (JS)? (S/C)")
+        if (simCom === "C") {
+            let numInput = readline.question("If the number is a multiple of... ");
+            if (isNaN(numInput)) {
+                console.log("Thats not a number!");
+                continue;
+            } else {
+                num = parseInt(numInput)
+            }
+            let rule = readline.question("... I must (this must take the form of a javascript function, with the input arr being the array of words the computer must say) ... ")
+            rules.numbers.unshift(num)
+            rules[num] = Function("arr", rule)
+        } else if (simCom === "S") {
+            let numInput = readline.question("If the number is a multiple of... ");
         if (isNaN(numInput)) {
             console.log("Thats not a number!");
             continue;
@@ -45,10 +58,13 @@ while (true) {
         let rule = readline.question("... I must say ... ")
         rules.numbers.unshift(num)
         rules[num] = (arr) => {arr.push(rule)}
+        }
     } else if (addRule === "N") {
         break;
     }
 }
+
+
 
 while (true) {
     let maxNumInput = readline.question("What is the maximum number you would like to FizzBuzz to? ");
