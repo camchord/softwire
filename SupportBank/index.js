@@ -1,5 +1,7 @@
 const fs = require('fs');
+
 const moment = require('moment');
+const readline = require('readline-sync');
 
 let rawData
 
@@ -29,7 +31,7 @@ class Account {
     listAccount() {
         console.log(`${this.name} - Balance: ${this.total}`);
         this.transactions.forEach(ts => {
-            console.log(`Date: ${ts.Date.format("DD/MM/YYYY")} - ${ts.From === this.name ? "To" : "From"}: ${ts.From === this.name ? ts.To : ts.From} - Amount: ${ts.From === this.name ? "-" : ""}£${ts.Amount} - Reference: ${ts.Narrative}`)
+            console.log(`Date: ${ts.Date.format("DD/MM/YYYY Do")} - ${ts.From === this.name ? "To" : "From"}: ${ts.From === this.name ? ts.To : ts.From} - Amount: ${ts.From === this.name ? "-" : ""}£${ts.Amount.toFixed(2)} - Reference: ${ts.Narrative}`)
         })
     }
 
@@ -77,12 +79,28 @@ const csvParse = (cb) => {
     cb(data.slice(1,data.length-1))   
 }
 
+const bankApp = () => {
+    Account.balanceUpdate();
+    console.log("Welcome to SupportBank!")
+    while (true) {
+        console.log("Do you want to List All accounts, or List a single named account?")
+        let mode = readline.prompt();
+        if (mode === "List All") {
+            Account.listAll();
+        } else if (mode.slice(0,4) === "List") {
+            let account = accounts.find(a => a.name === mode.slice(5, mode.length));
+            if (account) {
+                account.listAccount();
+            } else {
+                console.log("No account with that name found, please try again!")
+            }
+        }
+    }
+}
+
 fs.createReadStream('Transactions2014.csv')
     .on('data', data => rawData = data.toString())
     .on('close', () => csvParse((data) => {
         createAccounts(data);
-        Account.balanceUpdate();
-        accounts[3].listAccount();
+        bankApp();
     }))
-
-    
