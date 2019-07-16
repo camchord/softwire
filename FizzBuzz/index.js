@@ -35,7 +35,7 @@ const fizzBuzz = (i) => {
 while (true) {
     let addRule = readline.question("Would you like to add a rule? (Y/N) ");
     if (addRule === "Y") {
-        let simCom = readline.question("Simple rule (No JS), or Complex Rule (JS)? (S/C)")
+        let simCom = readline.question("Simple rule (No JS), or Complex Rule (JS)? (S/C) ")
         if (simCom === "C") {
             let numInput = readline.question("If the number is a multiple of... ");
             if (isNaN(numInput)) {
@@ -44,7 +44,7 @@ while (true) {
             } else {
                 num = parseInt(numInput)
             }
-            let rule = readline.question("... I must (this must take the form of a javascript function, with the input arr being the array of words the computer must say) ... ")
+            let rule = readline.question("... I must ... (this must take the form of a javascript function, with the input arr being the array of words the computer must say) ")
             rules.numbers.unshift(num)
             rules[num] = Function("arr", rule)
         } else if (simCom === "S") {
