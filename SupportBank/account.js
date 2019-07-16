@@ -2,7 +2,7 @@ const moment = require('moment');
 
 const accounts = []
 
-exports.Account = class Account {
+class Account {
     constructor(name, transaction) {
         this.name = name;
         this.transactions = [transaction];
@@ -14,11 +14,11 @@ exports.Account = class Account {
     }
 
     balance() {
-        this.total = this.transactions.reduce((acc, ts) => {
-            if (ts.From === this.name) {
-                return acc - ts.Amount
+        this.total = this.transactions.reduce((acc, transaction) => {
+            if (transaction.From === this.name) {
+                return acc - transaction.Amount
             } else {
-                return acc + ts.Amount
+                return acc + transaction.Amount
             }
         },0).toFixed(2)
     }
@@ -37,25 +37,29 @@ exports.Account = class Account {
     static balanceUpdate() {
         accounts.forEach(account => account.balance())
     }
+    static clear() {
+        accounts.splice(0, accounts.length)
+    }
 }
 
 exports.createAccounts = (data) => {
-    data.forEach((ts) => {
-        const from = ts.From;
-        const to = ts.To;
+    data.forEach(transaction => {
+        const from = transaction.From;
+        const to = transaction.To;
         const fromIndex = accounts.findIndex(account => account.name === from);
         const toIndex = accounts.findIndex(account => account.name === to);
         if (fromIndex === -1) {
-            accounts.push(new Account(from, ts))
+            accounts.push(new Account(from, transaction))
         } else {
-            accounts[fromIndex].addTransaction(ts)
+            accounts[fromIndex].addTransaction(transaction)
         }
         if (toIndex === -1) {
-            accounts.push(new Account(to, ts))
+            accounts.push(new Account(to, transaction))
         } else {
-            accounts[toIndex].addTransaction(ts)
+            accounts[toIndex].addTransaction(transaction)
         }
     })
 }
+exports.Account = Account;
 
 exports.accounts = accounts;
