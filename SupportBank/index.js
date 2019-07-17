@@ -24,8 +24,9 @@ let transactions = [];
 const importFile = (filename) => {
     fs.readFile(path.join('data', filename), (err, rawData) => {
         if (!err) {
-            transactions = transactions.concat(parse.chooseParse(filename, rawData));
-            account.createAccounts(parse.chooseParse(filename, rawData), accounts);
+            const data = parse.chooseParse(filename, rawData)
+            transactions = transactions.concat(data);
+            account.createAccounts(data, accounts);
             console.log('File successfully imported!')
             bankApp();
         } else {
@@ -71,8 +72,8 @@ const exportTransactions = (input) => {
     });
 }
 
-const exportAccounts = () => {
-    exportFile.exportAccounts(accounts, () => {
+const exportAccounts = (input) => {
+    exportFile.exportAccounts(accounts, input.slice(16, input.length).toLowerCase(), () => {
         bankApp();
     });
 }
@@ -93,7 +94,7 @@ const invalid = () => {
 }
 
 const bankApp = () => {
-    console.log("\n\nWould you like to:\nIMPORT a file\nLIST ALL accounts\nLIST a single named account\nRequest an account BALANCE\nEXPORT ACCOUNTS\nEXPORT TRANSACTIONS (json/csv/xml)\nEXPORT transactions for a single named account (json/csv/xml)\nCLEAR")
+    console.log("\n\nWould you like to:\nIMPORT a file\nLIST ALL accounts\nLIST a single named account\nRequest an account BALANCE\nEXPORT ACCOUNTS (json/xml)\nEXPORT TRANSACTIONS (json/csv/xml)\nEXPORT transactions for a single named account (json/csv/xml)\nCLEAR")
     const input = readline.prompt();
     const mode = chooseMode(input);
     switch(mode) {
@@ -112,7 +113,7 @@ const bankApp = () => {
             exportTransactions(input);
             break;
         case 6:
-            exportAccounts();
+            exportAccounts(input);
             break;
         case 7:
             exportAccount(input);
@@ -120,7 +121,7 @@ const bankApp = () => {
         case 8:
             clear();
             break;
-        case 0:
+        case 9:
             invalid();
             break;
         }
@@ -137,7 +138,7 @@ const chooseMode = (mode) => {
         return 4;
     } else if (mode.slice(0,19).toLowerCase() === 'export transactions') {
         return 5;
-    } else if (mode.toLowerCase() === 'export accounts') {
+    } else if (mode.slice(0,15).toLowerCase() === 'export accounts') {
         return 6;
     } else if (mode.slice(0,6).toLowerCase() === "export") {
         return 7;

@@ -3,9 +3,32 @@ const fs = require('fs');
 
 const moment = require('moment');
 
-exports.exportAccounts = (accounts, callback) => {
-    const json = JSON.stringify(accounts);
-    fs.writeFile(path.join('data','output',`accounts-${moment().format('DD-MM-YY-h-mm-ss')}.json`), json, (err) => {
+exports.exportAccounts = (accounts, filetype, callback) => {
+    let data;
+    if (filetype === 'json') {
+        data =  JSON.stringify(accounts);
+    } else if (filetype === 'xml') {
+        data = accounts.reduce((data, account) => {
+            return data + `
+    <Account Name="${account.name}">
+        <TransactionList>${account.transactions.reduce((list, transaction) => list + `
+            <SupportTransaction Date="${transaction.Date.format()}">
+                <Narrative>${transaction.Narrative}</Narrative>
+                <Amount>${transaction.Amount}</Amount>
+                <Parties>
+                    <From>${transaction.From}</From>
+                    <To>${transaction.To}</To>
+                </Parties>
+            </SupportTransaction>`, '')}
+        </TransactionList>
+    </Account>`
+        }, '<?xml version="1.0" encoding="utf-8"?>\n<AccountList>');
+        data = data + '\n</TransactionList>'
+    } else {
+        console.log('Invalid file format, please use json or xml');
+        return callback();
+    }
+    fs.writeFile(path.join('data','output',`accounts-${moment().format('DD-MM-YY-h-mm-ss')}.${filetype}`), data, (err) => {
         if (err) throw err
         callback()
     })
@@ -28,12 +51,15 @@ exports.exportAccount = (account, filetype, callback) => {
             <To>${transaction.To}</To>
         </Parties>
     </SupportTransaction>`, '<?xml version="1.0" encoding="utf-8"?>\n<TransactionList>');
-        data = data + '\n</TransactionList>'
-    }
-    fs.writeFile(path.join('data','output',`${account.name.replace(' ','-')}-${moment().format('DD-MM-YY-h-mm-ss')}.${filetype}`), data, (err) => {
-        if (err) throw err
-        callback()
-    })
+        data = data + '\n</AccountList>'
+        } else {
+            console.log('Invalid file format, please use csv, json or xml');
+            return callback();
+        }
+        fs.writeFile(path.join('data','output',`${account.name.replace(' ','-')}-${moment().format('DD-MM-YY-h-mm-ss')}.${filetype}`), data, (err) => {
+            if (err) throw err
+            callback()
+        })
     } else {
         console.log('User not found, please try again');
         callback();

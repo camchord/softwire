@@ -1,0 +1,80 @@
+Date,From,To,Narrative,Amount
+03/01/2012,Sam N,Dan W,Coffee,-6.98
+15/01/2012,Sarah T,Sam N,Beers,1.79
+03/02/2012,Sam N,Rob S,Pokemon Training,-4.67
+24/02/2012,Sam N,Dan W,Beers,-9.81
+06/04/2012,Sam N,Chris W,Audit and Other Financial Services,-6.06
+14/04/2012,Sam N,Todd,Lunch,-5.43
+28/04/2012,Laura B,Sam N,Fantasy Football,0.93
+10/05/2012,Todd,Sam N,Pokemon Training,11.4
+11/05/2012,Sam N,Dan W,Sandbox Help,-1.55
+18/05/2012,Rob S,Sam N,Automated Testing Services,8.6
+22/06/2012,Laura B,Sam N,Lunch,8.71
+24/07/2012,Jon A,Sam N,Beers,5.83
+31/07/2012,Rob S,Sam N,Misc Morale,4.34
+04/08/2012,Stephen S,Sam N,Lunch,10.41
+06/08/2012,Tim L,Sam N,Sandbox Help,2.12
+28/08/2012,Tim L,Sam N,Services Rendered,9.11
+04/09/2012,Todd,Sam N,Snooker Night,3.57
+21/09/2012,Sam N,Jon A,Beers,-10.25
+23/10/2012,Sam N,Laura B,Coffee,-2.13
+26/10/2012,Dan W,Sam N,Beers,6.22
+30/10/2012,Dan W,Sam N,Coffee,11.07
+06/11/2012,Sam N,Sarah T,Beers,-6.66
+12/12/2012,Sam N,Laura B,Rails Consultancy,-2.44
+04/02/2013,Sam N,Sarah T,Arcade Social,-5.52
+15/02/2013,Sam N,Chris W,Lunch,-1.54
+18/02/2013,Sarah T,Sam N,Coffee,6.98
+06/03/2013,Laura B,Sam N,Stationary Items,7.26
+22/05/2013,Stephen S,Sam N,Pokemon Training,9.24
+05/07/2013,Stephen S,Sam N,Lunch,6.73
+31/07/2013,Dan W,Sam N,Pokemon Training,1.2
+19/08/2013,Tim L,Sam N,Coffee,7.51
+23/08/2013,Todd,Sam N,Beers,0.6
+27/08/2013,Sam N,Gergana I,Fantasy Football,-5.45
+16/09/2013,Sam N,Rob S,Beers,-2.81
+20/10/2013,Sam N,Sarah T,Lunch,-10.6
+27/10/2013,Sam N,Dan W,Misc Morale,-6.89
+12/11/2013,Rob S,Sam N,Misc Morale,1.25
+24/11/2013,Tim L,Sam N,Rails Consultancy,7.59
+29/11/2013,Ben B,Sam N,Pokemon Training,4.01
+01/12/2013,Sam N,Sarah T,Lunch,-6.35
+05/12/2013,Ben B,Sam N,Coffee,9
+22/12/2013,Gergana I,Sam N,Lunch,1.32
+30/12/2013,Rob S,Sam N,Misc Morale,2.54
+15/01/2014,Sam N,Stephen S,Spline Reticulation,-11.63
+20/01/2014,Sam N,Stephen S,Beers,-8.2
+24/01/2014,Laura B,Sam N,Coffee,11.68
+31/01/2014,Sam N,Gergana I,Services Rendered,-6.29
+07/02/2014,Jon A,Sam N,Beers,1.65
+10/02/2014,Dan W,Sam N,Lunch,0.93
+18/02/2014,Sarah T,Sam N,Spline Reticulation,1.6
+22/02/2014,Tim L,Sam N,Pokemon Training,5.2
+03/03/2014,Sam N,Gergana I,Lunch,-8.76
+23/03/2014,Jon A,Sam N,Lunch,8.49
+27/03/2014,Ben B,Sam N,Misc Morale,10.76
+01/04/2014,Sam N,Laura B,Lunch,-2.87
+08/04/2014,Stephen S,Sam N,Lego Assistance,2.96
+15/04/2014,Rob S,Sam N,Snooker Night,8.86
+24/05/2014,Sam N,Tim L,Sandcastle Help,-8.8
+11/06/2014,Stephen S,Sam N,Lego Assistance,5.14
+14/06/2014,Todd,Sam N,Lego Assistance,6.3
+06/07/2014,Sam N,Jon A,Beers,-4.37
+14/07/2014,Gergana I,Sam N,Coffee,10.92
+29/07/2014,Jon A,Sam N,Lunch,5.31
+01/08/2014,Sam N,Gergana I,Coffee,-2.72
+22/08/2014,Chris W,Sam N,Golf Bets,1.9
+01/09/2014,Sam N,Gergana I,Pokemon Training,-9.41
+19/10/2014,Dan W,Sam N,Automated Testing Services,8
+22/10/2014,Dan W,Sam N,Beers,0.55
+09/11/2014,Sam N,Laura B,Beers,-7.76
+14/11/2014,Sam N,Dan W,Spline Reticulation,-0.8
+18/11/2014,Sam N,Chris W,Golf Bets,-6.44
+02/12/2014,Jon A,Sam N,Pokemon Training,11.04
+29/12/2014,Ben B,Sam N,Coffee,5.26
+29/01/2015,Sam N,Chris W,Lunch,-9.01
+10/02/2015,Sam N,Gergana I,Sandbox Help,-9.84
+01/03/2015,Ben B,Sam N,Lunch,NaN
+08/03/2015,Ben B,Sam N,Pokemon Training,11.32
+15/03/2015,Todd,Sam N,Pokemon Training,2.29
+15/04/2015,Ben B,Sam N,Lego Assistance,8.5

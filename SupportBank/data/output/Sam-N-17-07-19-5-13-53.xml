@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransactionList>
+    <SupportTransaction Date="2012-01-03T00:00:00+00:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>6.98</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Dan W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-01-15T00:00:00+00:00">
+        <Narrative>Beers</Narrative>
+        <Amount>1.79</Amount>
+        <Parties>
+            <From>Sarah T</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-02-03T00:00:00+00:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>4.67</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Rob S</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-02-24T00:00:00+00:00">
+        <Narrative>Beers</Narrative>
+        <Amount>9.81</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Dan W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-04-06T00:00:00+01:00">
+        <Narrative>Audit and Other Financial Services</Narrative>
+        <Amount>6.06</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Chris W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-04-14T00:00:00+01:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>5.43</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Todd</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-04-28T00:00:00+01:00">
+        <Narrative>Fantasy Football</Narrative>
+        <Amount>0.93</Amount>
+        <Parties>
+            <From>Laura B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-05-10T00:00:00+01:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>11.4</Amount>
+        <Parties>
+            <From>Todd</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-05-11T00:00:00+01:00">
+        <Narrative>Sandbox Help</Narrative>
+        <Amount>1.55</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Dan W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-05-18T00:00:00+01:00">
+        <Narrative>Automated Testing Services</Narrative>
+        <Amount>8.6</Amount>
+        <Parties>
+            <From>Rob S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-06-22T00:00:00+01:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>8.71</Amount>
+        <Parties>
+            <From>Laura B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-07-24T00:00:00+01:00">
+        <Narrative>Beers</Narrative>
+        <Amount>5.83</Amount>
+        <Parties>
+            <From>Jon A</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-07-31T00:00:00+01:00">
+        <Narrative>Misc Morale</Narrative>
+        <Amount>4.34</Amount>
+        <Parties>
+            <From>Rob S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-08-04T00:00:00+01:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>10.41</Amount>
+        <Parties>
+            <From>Stephen S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-08-06T00:00:00+01:00">
+        <Narrative>Sandbox Help</Narrative>
+        <Amount>2.12</Amount>
+        <Parties>
+            <From>Tim L</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-08-28T00:00:00+01:00">
+        <Narrative>Services Rendered</Narrative>
+        <Amount>9.11</Amount>
+        <Parties>
+            <From>Tim L</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-09-04T00:00:00+01:00">
+        <Narrative>Snooker Night</Narrative>
+        <Amount>3.57</Amount>
+        <Parties>
+            <From>Todd</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-09-21T00:00:00+01:00">
+        <Narrative>Beers</Narrative>
+        <Amount>10.25</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Jon A</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-10-23T00:00:00+01:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>2.13</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Laura B</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-10-26T00:00:00+01:00">
+        <Narrative>Beers</Narrative>
+        <Amount>6.22</Amount>
+        <Parties>
+            <From>Dan W</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-10-30T00:00:00+00:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>11.07</Amount>
+        <Parties>
+            <From>Dan W</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-11-06T00:00:00+00:00">
+        <Narrative>Beers</Narrative>
+        <Amount>6.66</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Sarah T</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2012-12-12T00:00:00+00:00">
+        <Narrative>Rails Consultancy</Narrative>
+        <Amount>2.44</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Laura B</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-02-04T00:00:00+00:00">
+        <Narrative>Arcade Social</Narrative>
+        <Amount>5.52</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Sarah T</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-02-15T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>1.54</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Chris W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-02-18T00:00:00+00:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>6.98</Amount>
+        <Parties>
+            <From>Sarah T</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-03-06T00:00:00+00:00">
+        <Narrative>Stationary Items</Narrative>
+        <Amount>7.26</Amount>
+        <Parties>
+            <From>Laura B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-05-22T00:00:00+01:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>9.24</Amount>
+        <Parties>
+            <From>Stephen S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-07-05T00:00:00+01:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>6.73</Amount>
+        <Parties>
+            <From>Stephen S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-07-31T00:00:00+01:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>1.2</Amount>
+        <Parties>
+            <From>Dan W</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-08-19T00:00:00+01:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>7.51</Amount>
+        <Parties>
+            <From>Tim L</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-08-23T00:00:00+01:00">
+        <Narrative>Beers</Narrative>
+        <Amount>0.6</Amount>
+        <Parties>
+            <From>Todd</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-08-27T00:00:00+01:00">
+        <Narrative>Fantasy Football</Narrative>
+        <Amount>5.45</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Gergana I</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-09-16T00:00:00+01:00">
+        <Narrative>Beers</Narrative>
+        <Amount>2.81</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Rob S</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-10-20T00:00:00+01:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>10.6</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Sarah T</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-10-27T00:00:00+01:00">
+        <Narrative>Misc Morale</Narrative>
+        <Amount>6.89</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Dan W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-11-12T00:00:00+00:00">
+        <Narrative>Misc Morale</Narrative>
+        <Amount>1.25</Amount>
+        <Parties>
+            <From>Rob S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-11-24T00:00:00+00:00">
+        <Narrative>Rails Consultancy</Narrative>
+        <Amount>7.59</Amount>
+        <Parties>
+            <From>Tim L</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-11-29T00:00:00+00:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>4.01</Amount>
+        <Parties>
+            <From>Ben B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-12-01T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>6.35</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Sarah T</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-12-05T00:00:00+00:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>9</Amount>
+        <Parties>
+            <From>Ben B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-12-22T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>1.32</Amount>
+        <Parties>
+            <From>Gergana I</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2013-12-30T00:00:00+00:00">
+        <Narrative>Misc Morale</Narrative>
+        <Amount>2.54</Amount>
+        <Parties>
+            <From>Rob S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-01-15T00:00:00+00:00">
+        <Narrative>Spline Reticulation</Narrative>
+        <Amount>11.63</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Stephen S</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-01-20T00:00:00+00:00">
+        <Narrative>Beers</Narrative>
+        <Amount>8.2</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Stephen S</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-01-24T00:00:00+00:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>11.68</Amount>
+        <Parties>
+            <From>Laura B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-01-31T00:00:00+00:00">
+        <Narrative>Services Rendered</Narrative>
+        <Amount>6.29</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Gergana I</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-02-07T00:00:00+00:00">
+        <Narrative>Beers</Narrative>
+        <Amount>1.65</Amount>
+        <Parties>
+            <From>Jon A</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-02-10T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>0.93</Amount>
+        <Parties>
+            <From>Dan W</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-02-18T00:00:00+00:00">
+        <Narrative>Spline Reticulation</Narrative>
+        <Amount>1.6</Amount>
+        <Parties>
+            <From>Sarah T</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-02-22T00:00:00+00:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>5.2</Amount>
+        <Parties>
+            <From>Tim L</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-03-03T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>8.76</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Gergana I</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-03-23T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>8.49</Amount>
+        <Parties>
+            <From>Jon A</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-03-27T00:00:00+00:00">
+        <Narrative>Misc Morale</Narrative>
+        <Amount>10.76</Amount>
+        <Parties>
+            <From>Ben B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-04-01T00:00:00+01:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>2.87</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Laura B</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-04-08T00:00:00+01:00">
+        <Narrative>Lego Assistance</Narrative>
+        <Amount>2.96</Amount>
+        <Parties>
+            <From>Stephen S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-04-15T00:00:00+01:00">
+        <Narrative>Snooker Night</Narrative>
+        <Amount>8.86</Amount>
+        <Parties>
+            <From>Rob S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-05-24T00:00:00+01:00">
+        <Narrative>Sandcastle Help</Narrative>
+        <Amount>8.8</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Tim L</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-06-11T00:00:00+01:00">
+        <Narrative>Lego Assistance</Narrative>
+        <Amount>5.14</Amount>
+        <Parties>
+            <From>Stephen S</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-06-14T00:00:00+01:00">
+        <Narrative>Lego Assistance</Narrative>
+        <Amount>6.3</Amount>
+        <Parties>
+            <From>Todd</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-07-06T00:00:00+01:00">
+        <Narrative>Beers</Narrative>
+        <Amount>4.37</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Jon A</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-07-14T00:00:00+01:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>10.92</Amount>
+        <Parties>
+            <From>Gergana I</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-07-29T00:00:00+01:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>5.31</Amount>
+        <Parties>
+            <From>Jon A</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-08-01T00:00:00+01:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>2.72</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Gergana I</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-08-22T00:00:00+01:00">
+        <Narrative>Golf Bets</Narrative>
+        <Amount>1.9</Amount>
+        <Parties>
+            <From>Chris W</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-09-01T00:00:00+01:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>9.41</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Gergana I</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-10-19T00:00:00+01:00">
+        <Narrative>Automated Testing Services</Narrative>
+        <Amount>8</Amount>
+        <Parties>
+            <From>Dan W</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-10-22T00:00:00+01:00">
+        <Narrative>Beers</Narrative>
+        <Amount>0.55</Amount>
+        <Parties>
+            <From>Dan W</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-11-09T00:00:00+00:00">
+        <Narrative>Beers</Narrative>
+        <Amount>7.76</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Laura B</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-11-14T00:00:00+00:00">
+        <Narrative>Spline Reticulation</Narrative>
+        <Amount>0.8</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Dan W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-11-18T00:00:00+00:00">
+        <Narrative>Golf Bets</Narrative>
+        <Amount>6.44</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Chris W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-12-02T00:00:00+00:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>11.04</Amount>
+        <Parties>
+            <From>Jon A</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2014-12-29T00:00:00+00:00">
+        <Narrative>Coffee</Narrative>
+        <Amount>5.26</Amount>
+        <Parties>
+            <From>Ben B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2015-01-29T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>9.01</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Chris W</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2015-02-10T00:00:00+00:00">
+        <Narrative>Sandbox Help</Narrative>
+        <Amount>9.84</Amount>
+        <Parties>
+            <From>Sam N</From>
+            <To>Gergana I</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2015-03-01T00:00:00+00:00">
+        <Narrative>Lunch</Narrative>
+        <Amount>NaN</Amount>
+        <Parties>
+            <From>Ben B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2015-03-08T00:00:00+00:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>11.32</Amount>
+        <Parties>
+            <From>Ben B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2015-03-15T00:00:00+00:00">
+        <Narrative>Pokemon Training</Narrative>
+        <Amount>2.29</Amount>
+        <Parties>
+            <From>Todd</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+    <SupportTransaction Date="2015-04-15T00:00:00+01:00">
+        <Narrative>Lego Assistance</Narrative>
+        <Amount>8.5</Amount>
+        <Parties>
+            <From>Ben B</From>
+            <To>Sam N</To>
+        </Parties>
+    </SupportTransaction>
+</AccountList>
