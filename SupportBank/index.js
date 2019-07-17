@@ -4,8 +4,9 @@ const path = require('path');
 const readline = require('readline-sync');
 const log4js = require('log4js');
 
-const parse = require('./parse')
-const account = require('./account')
+const parse = require('./parse');
+const exportFile = require('./export');
+const account = require('./account');
 
 log4js.configure({
     appenders: {
@@ -19,36 +20,58 @@ log4js.configure({
 const logger = log4js.getLogger('file');
 
 Account = account.Account;
-const accounts = account.accounts;
+let accounts = [];
+let transactions = [];
+
+const listAll = () => {
+    accounts.forEach(account => console.log(account.name))
+}
+const clear = () => {
+    accounts.splice(0, accounts.length);
+    transactions.splice(0, transactions.length)
+}
 
 const bankApp = () => {
-    Account.balanceUpdate();
     while (true) {
-        console.log("Do you want to List All accounts, List a single named account, or choose another file?")
-        let mode = readline.prompt();
-        if (mode === "List All") {
-            Account.listAll();
-        } else if (mode.slice(0,4) === "List") {
-            let account = accounts.find(a => a.name === mode.slice(5, mode.length));
+        console.log("Would you like to:\nLIST ALL accounts\nLIST a single named account\nRequest an account BALANCE\nIMPORT a different FILE\nEXPORT ACCOUNTS\nEXPORT TRANSACTIONS")
+        const mode = readline.prompt();
+        if (mode.toLowerCase() === "list all") {
+            listAll();
+        } else if (mode.slice(0,4).toLowerCase() === "list") {
+            const account = accounts.find(account => account.name === mode.slice(5, mode.length));
             if (account) {
                 account.listAccount();
             } else {
-                console.log("No account with that name found, please try again!")
+                console.log("No account with that name found, please try again!");
             }
-        } else if (mode.slice(0,11) === 'Import File') {
-            Account.clear();
+        } else if (mode.slice(0,11).toLowerCase() === 'import file') {
+            clear();
             importFile(mode.slice(12, mode.length));
             break;
+        } else if (mode.slice(0,7).toLowerCase() === 'balance') {
+            const account = accounts.find(account => account.name === mode.slice(8, mode.length))
+            if (account) {
+                console.log(`${account.name}, your balance is ${account.balance()}`);
+            } else {
+                console.log("No account with that name found, please try again!");
+            }
+        } else if (mode.toLowerCase() === 'export transactions') {
+            exportFile.exportTransactions(transactions, () => {
+                bankApp();
+            });
+            break;
+        } else if (mode.toLowerCase() === 'export accounts') {
+            exportFile.exportAccounts(accounts, () => {
+                bankApp();
+            })
         }
     }
 }
 
 const importFile = (filename) => {
-    fs.createReadStream(path.join('data', filename))
-        .on('data', data => rawData = parse.string(filename, data))
-        .on('close', () => {
-            data = parse.chooseParse(filename, rawData);
-            account.createAccounts(data);
+    fs.readFile(path.join('data', filename), (err, rawData) => {
+            transactions = parse.chooseParse(filename, rawData);
+            accounts = account.createAccounts(transactions);
             bankApp();
         })
 }

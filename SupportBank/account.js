@@ -1,12 +1,9 @@
 const moment = require('moment');
 
-const accounts = []
-
 class Account {
     constructor(name, transaction) {
         this.name = name;
         this.transactions = [transaction];
-        this.total = 0;
     }
 
     addTransaction(transaction) {
@@ -14,35 +11,29 @@ class Account {
     }
 
     balance() {
-        this.total = this.transactions.reduce((acc, transaction) => {
+        return this.transactions.reduce((acc, transaction) => {
             if (transaction.From === this.name) {
                 return acc - transaction.Amount
             } else {
                 return acc + transaction.Amount
             }
-        },0).toFixed(2)
+        },0).toFixed(2);
     }
 
     listAccount() {
-        console.log(`${this.name} - Balance: ${this.total}`);
-        this.transactions.forEach(ts => {
-            console.log(`Date: ${ts.Date.format("DD/MM/YYYY")} - ${ts.From === this.name ? "To" : "From"}: ${ts.From === this.name ? ts.To : ts.From} - Amount: ${ts.From === this.name ? "-" : ""}${ts.Amount.toFixed(2)} - Reference: ${ts.Narrative}`)
+        if (this.transactions.some(transaction => transaction.Error.length > 0)) {
+            console.log('ERROR - Some of your transactions include invalid data formats, please correct this');
+        } else {
+            console.log(`${this.name}`);
+            this.transactions.forEach(transaction => {console.log(`Date: ${transaction.Date.format("DD/MM/YYYY")} - ${transaction.From === this.name ? "To" : "From"}: ${transaction.From === this.name ? transaction.To : transaction.From} - Amount: ${transaction.From === this.name ? "-" : ""}${transaction.Amount.toFixed(2)} - Reference: ${transaction.Narrative}`)
         })
-    }
-
-    static listAll() {
-        accounts.forEach(account => console.log(`Name: ${account.name}, Balance: ${account.total}`))
-    }
-
-    static balanceUpdate() {
-        accounts.forEach(account => account.balance())
-    }
-    static clear() {
-        accounts.splice(0, accounts.length)
+        }
+        
     }
 }
 
 exports.createAccounts = (data) => {
+    const accounts = []
     data.forEach(transaction => {
         const from = transaction.From;
         const to = transaction.To;
@@ -59,7 +50,6 @@ exports.createAccounts = (data) => {
             accounts[toIndex].addTransaction(transaction)
         }
     })
+    return accounts
 }
 exports.Account = Account;
-
-exports.accounts = accounts;
