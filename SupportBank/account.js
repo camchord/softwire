@@ -20,7 +20,7 @@ class Account {
         },0).toFixed(2);
     }
 
-    listAccount() {
+    printAccount() {
         if (this.transactions.some(transaction => transaction.Error.length > 0)) {
             console.log('ERROR - Some of your transactions include invalid data formats, please correct this');
         } else {
@@ -32,8 +32,7 @@ class Account {
     }
 }
 
-exports.createAccounts = (data) => {
-    const accounts = []
+exports.createAccounts = (data, accounts) => {
     data.forEach(transaction => {
         const from = transaction.From;
         const to = transaction.To;
