@@ -7,7 +7,7 @@ const logger = log4js.getLogger('file');
 
 const csvParse = (rawData) => {
     const arrData = rawData.toString().split('\n');
-    const data = arrData.filter(transaction => {
+    return arrData.filter(transaction => {
         entries = transaction.split(',');
         return (entries[1] !== "From") && (entries[1] !== undefined || entries[2] !== undefined || entries[3] !== undefined)
     })
@@ -33,12 +33,11 @@ const csvParse = (rawData) => {
         }
         return result
     });
-    return data;  
 }
 
 const jsonParse = (rawData) => {
     const arrData = JSON.parse(rawData);
-    const data = arrData.map(transaction => {
+    return arrData.map(transaction => {
         return {
             Date: moment(transaction.Date),
             From: transaction.FromAccount,
@@ -48,7 +47,6 @@ const jsonParse = (rawData) => {
             Error:[]
         }
     })
-    return data;
 }
 
 const xmlParse = (rawData) => {
