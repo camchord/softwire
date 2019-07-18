@@ -1,4 +1,4 @@
-const fizzBuzz = require('./fizzbuzz');
+const fizzBuzz = require('./fizzbuzz').fizzBuzz;
 
 const tests = [[3,"Fizz"],[5,"Buzz"],[7,"Bang"],[11,"Bong"],[13,"Fezz"],[15,"FizzBuzz"],[21,"FizzBang"],[33,"Bong"],[65,"FezzBuzz"]];
 
